@@ -51,15 +51,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DataAccess.cs" />
     <Compile Include="ER\EmployeeContext.cs" />
     <Compile Include="ER\Model\Employee.cs" />
+    <Compile Include="Interfaces\IRepos.cs" />
     <Compile Include="Migrations\202312152001080_DBINIT.cs" />
     <Compile Include="Migrations\202312152001080_DBINIT.designer.cs">
       <DependentUpon>202312152001080_DBINIT.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\EmployeeRepo.cs" />
+    <Compile Include="Repos\Repo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -70,6 +73,7 @@
       <DependentUpon>202312152001080_DBINIT.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
